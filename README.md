@@ -47,7 +47,7 @@ GitHub repository → Settings → Secrets and variables → Actions → New rep
 ## Workflow Diagram
 
 ```mermaid
-flowchart LR
+flowchart TD
     A([Push / Pull Request]) --> B[Build<br/>compileall]
     B -->|success| C[Test<br/>unittest]
     C -->|success| D{Push to main?}
