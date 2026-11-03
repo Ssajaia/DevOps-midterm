@@ -29,6 +29,7 @@ A minimal web server written in pure Python (standard library only, no external 
 main.py                    # WSGI app and local server
 main_test.py               # unit tests
 healthcheck.sh             # health check script
+dashboard.py               # status dashboard generator
 health.log                 # health check results
 .github/workflows/ci.yml   # CI/CD workflow
 docs/                      # screenshots and diagram
@@ -95,3 +96,16 @@ Example `health.log` entries:
 2026-11-03 08:20:11 UP   https://<production-url>/about -> HTTP 200 in 0.12s
 2026-11-03 08:20:11 SUMMARY healthy (https://<production-url>)
 ```
+
+### Status Dashboard
+
+[`dashboard.py`](dashboard.py) turns `health.log` into a static `status.html` page (`python dashboard.py health.log status.html`).
+
+![Status dashboard](docs/dashboard.png)
+
+_Status dashboard: overall state, share of healthy runs, latest result per endpoint and recent check history._
+
+## Setup Notes
+
+- Add the repository secret `VERCEL_TOKEN` (GitHub → Settings → Secrets and variables → Actions). Create the token in Vercel under Account Settings → Tokens.
+- The Vercel deployment must be publicly reachable. Disable Vercel Authentication under Project → Settings → Deployment Protection, or use the public production domain, otherwise unauthenticated requests are redirected to the Vercel login page.
