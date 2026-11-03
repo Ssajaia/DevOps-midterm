@@ -20,10 +20,12 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
-        def make_server(port=8000):
-            return HTTPServer(("", port), Handler)
 
-        if __name__ == "__main__":
-            server = make_server(8000)
-            print("Listening on http://localhost:8000")
-            server.serve_forever()
+def make_server(port=8000):
+    return HTTPServer(("", port), Handler)
+
+
+if __name__ == "__main__":
+    server = make_server(8000)
+    print("Listening on http://localhost:8000")
+    server.serve_forever()
