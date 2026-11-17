@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python-app
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "./healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
