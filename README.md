@@ -10,8 +10,6 @@ A minimal web server written in pure Python (standard library only, no external 
 | `/about` | `Simple server built with the standard library` | 200    |
 | other    | `Not found`                                     | 404    |
 
-**Live application:** `<paste production URL here>`
-
 ### Tools
 
 | Purpose           | Tool                                           |
