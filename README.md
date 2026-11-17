@@ -90,9 +90,9 @@ chmod +x healthcheck.sh
 Example `health.log` entries:
 
 ```
-2026-11-03 08:20:11 UP   https://<production-url>/ -> HTTP 200 in 0.18s
-2026-11-03 08:20:11 UP   https://<production-url>/about -> HTTP 200 in 0.12s
-2026-11-03 08:20:11 SUMMARY healthy (https://<production-url>)
+2026-11-03 08:20:11 UP   https://devops-midterm.vercel.app/ -> HTTP 200 in 0.18s
+2026-11-03 08:20:11 UP   https://devops-midterm.vercel.app/about -> HTTP 200 in 0.12s
+2026-11-03 08:20:11 SUMMARY healthy (https://devops-midterm.vercel.app)
 ```
 
 ### Status Dashboard
