@@ -84,7 +84,7 @@ _The application responding with `Welcome` on `/`._
 
 ```bash
 chmod +x healthcheck.sh
-./healthcheck.sh https://<production-url>
+./healthcheck.sh https://devops-midterm.vercel.app
 ```
 
 Example `health.log` entries:
